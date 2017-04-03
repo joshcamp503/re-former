@@ -1,0 +1,11 @@
+<%= form_for(@user, html: {method: "patch"}) do |f| %>
+	<%= label(:user, :email) %>
+	<%= f.text_field :email %>
+	<%= label(:user, :username) %>
+	<%= f.text_field :username %>
+	<%= label(:user, :password) %>
+	<%= f.text_field :password %>
+	<%= f.submit "Submit" %>
+<% end %>
+
+<%= @user.errors.full_messages %>
